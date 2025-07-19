@@ -1,0 +1,11 @@
+//
+//  Configuration.xcconfig
+//  MapDay
+//
+//  Created by 이유리 on 7/18/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+NAVER_MAP_KEY = 6gfk9omvf1

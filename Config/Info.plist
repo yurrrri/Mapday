@@ -13,5 +13,9 @@
         <string>Pretendard-Regular.otf</string>
         <string>Pretendard-SemiBold.otf</string>
     </array>
+    <key>NMFNcpKeyId</key>
+    <string>$(NAVER_MAP_KEY)</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>위치 기반 맛집 검색을 위해 위치 권한 허용이 필요합니다.</string>
 </dict>
 </plist>
