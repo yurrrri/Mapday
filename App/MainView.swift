@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var vm: MapDayViewModel = MapDayViewModel()
     @State var pageNumber: Int = 1
     
     var body: some View {
         TabView(selection: $pageNumber) {
-            DiaryView(vm: vm)
+            DiaryView()
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("다이어리")
                 }
                 .tag(0)
             
-            HomeView(vm: vm)
+            HomeView(vm: HomeViewModel())
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("홈")

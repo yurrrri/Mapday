@@ -9,13 +9,11 @@ import SwiftUI
 
 struct DiaryView: View {
     
-    @ObservedObject var vm: MapDayViewModel
-
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    DiaryView(vm: MapDayViewModel())
+    DiaryView()
 }
