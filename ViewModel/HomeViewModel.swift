@@ -13,4 +13,17 @@ final class HomeViewModel: ObservableObject {
     @Published var places: [PlaceInfo] = []
 
     private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        bindMapCoordinator()
+    }
+    
+    private func bindMapCoordinator() {
+        MapView.Coordinator.shared.$places
+            .receive(on: RunLoop.main)
+            .sink { [weak self] places in
+                self?.places = places
+            }
+            .store(in: &cancellables)
+    }
 }

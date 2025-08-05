@@ -87,6 +87,7 @@ struct MapView: UIViewRepresentable {
                         }
                     },
                     receiveValue: { [weak self] places in
+                        self?.places = places
                         self?.addPlaceMarkers(places)
                     }
                 )
