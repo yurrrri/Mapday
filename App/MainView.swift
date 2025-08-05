@@ -12,19 +12,23 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $pageNumber) {
-            DiaryView()
-                .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("다이어리")
-                }
-                .tag(0)
+            NavigationStack {
+                DiaryView()
+            }
+            .tabItem {
+                Image(systemName: "square.and.pencil")
+                Text("다이어리")
+            }
+            .tag(0)
             
-            HomeView(vm: HomeViewModel())
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("홈")
-                }
-                .tag(1)
+            NavigationStack {
+                HomeView(vm: HomeViewModel())
+            }
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("홈")
+            }
+            .tag(1)
         }
     }
 }
